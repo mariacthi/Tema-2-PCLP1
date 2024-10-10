@@ -1,0 +1,62 @@
+// Tudor Maria - Elena, 311CA
+
+Am rezolvat tema 2 cu ajutorul unui pointer triplu alocat dinamic si pe care 
+l-am realocat dupa fiecare incarcarea in memorie a unei noi matrice.
+
+    Incarcarea in memorie a unei matrice
+Am folosit trei pointeri pentru stocarea numarului de linii si coloane, precum
+si a matricei citite, dupa care am realocat toti acesti pointeri cu cate o 
+unitate in pregatire pentru urmatoarea citire.
+
+    Determinarea dimensiunilor unei matrice
+Dupa verificarea existentei acesteia, am folosit cei doi pointeri in care am
+retinut la citire dimensiunile fiecarei matrice pentru a afisa numerele cerute.
+
+    Afisarea unei matrice
+In mod asemanator, dupa ce am verificat ca exista matricea cu indexul cerut, am
+afisat matricea ceruta tot cu ajutorul celor trei pointeri.
+
+    Redimensionarea unei matrice
+Am realizat aceasta cerinta prin o functie care a alocat si returnat matricea
+redimensionata, eliberand matricea deja alocata, si a inlocuit numarul vechi 
+de linii si coloane cu cel nou, prin referentiere.
+
+    Inmultirea a doua matrice
+Pentru operatia de inmultire, am returnat de asemenea printr-o functie un pointer
+catre matricea formata din rezultatul inmultirii si alocata dinamic, avand grija
+si sa realoc cei trei pointeri din main pentru ca matricea-produs sa poata fi 
+asezata la finalul listei de matrice.
+
+    Sortarea matricelor
+Intr-o functie, calculez suma elementelor fiecarei matrice dupa care ordonez in
+functie de aceste sume pointerul de pozitii, precum si cel de linii si coloane,
+cu ajutorul carora voi sorta intr-un nou triplu pointer matricele ordonate, pe
+care il voi returna, nu inainte sa eliberez pointerii pe care nu ii voi mai 
+folosi. 
+
+    Transpunerea unei matrice
+Parcurgand matricea pe coloane, ma folosesc de un dublu pointer in care copiez 
+transpusa, dupa care il returnez pe acesta, in locul matricei vechi.
+
+    Ridicarea unei matrice la o putere in timp logaritmic
+Dupa ce imi creez elementul neutru al inmultirii a doua matrice, parcurg bit cu
+bit numarul ce reprezinta puterea la care trebuie ridicata matrice. Dupa cum se
+observa, la inceput nu m-am prins cum sa fac sa modific un pointer intr-o
+functie direct, motiv pentru care am folosit functii care returneaza pointerul,
+dupa ce l-am eliberat pe cel vechi. De aceea, am creat copii in care sa stochez 
+rezultatul inmultirilor celor doua matrici, dupa care am copiat datele astea in 
+matricea in care aveam nevoie.
+
+    Eliberarea memoriei unei matrice
+Am creat un nou pointer triplu in care am retinut toate matricele mai putin cea 
+eliberata, dupa care l-am returnat pe acesta, eliberand toate resursele si 
+modificand si pointerii de linii si coloane.
+
+    Eliberarea tuturor resurselor
+Am eliberat mai intai matricele din pointerul triplu, dupa care pointerii 
+folositi in main si am oprit bucla din while pentru a incheia rularea.
+
+In realizarea programului, am mai folosit si functii de verificare a pointerilor
+pentru a ma asigura ca nu sunt nuli, precum si functii ce afiseaza mesaje (cu
+nume sugestive) pentru a verifica validitatea diverselor operatii cerute si a
+printa eventualele mesaje de eroare.
